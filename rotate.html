@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+}
+#div1 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#div2 {
+  padding: 50px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: red;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+#div3 {
+  padding: 40px;
+  position: absolute;
+  background: url(https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png);
+  background-size: cover;
+  top:0;
+  left:0;
+  border: 1px solid black;
+  background-color: yellow;
+  transform:perspective(1000px) rotateY(0deg) translateX(-150px) translateZ(200px);
+  transform-style: preserve-3d;
+  animation: animate 10s linear infinite;
+  
+}
+
+@keyframes animate {
+	0%{
+    transform:perspective(1000px) rotateY(0deg) translateX(-150px) translateZ(50px);
+    }
+	100%{
+    transform:perspective(1000px) rotateY(360deg) translateX(-150px) translateZ(50px);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div id="div1">
+  <div id="div2">HELLO
+  <div id="div3">YELLOW</div>
+  </div>
+</div>
+
+</body>
+</html>
